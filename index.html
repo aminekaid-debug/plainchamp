@@ -333,8 +333,18 @@
             break-before: page;
             }
         }
-        
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
+    table, .artwork-info table {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .artwork-info table td {
+        padding: 12px 8px !important;
+        font-size: 1rem !important;
+        word-break: break-word !important;
+    }
+}
+/*         @media (max-width: 768px) {
             .artwork-details {
                 flex-direction: column;
             }
@@ -349,7 +359,7 @@
                 padding-left: 0;
                 padding-top: 15px;
                 margin-top: 15px;
-            }
+            } */
             
             .exhibition-title {
                 font-size: 2.5rem;
@@ -662,7 +672,7 @@
                 <!-- Tableau 28 -->
                 <div class="artwork-grid-item">
                     <div class="artwork-grid-image">
-                         <img src="Selection\Maroc_03_22L-14H.JPG"  width="82%">
+                         <img src="Selection\Maroc_03_22L-14H.jpg"  width="82%">
                     </div>
                     <h4 class="artwork-grid-title">Maroc</h4>
                     <p class="artwork-grid-technique">Huile sur toile, 22 × 14 cm</p>
@@ -787,4 +797,3 @@
     </div> -->
 </body>
 </html>
-
