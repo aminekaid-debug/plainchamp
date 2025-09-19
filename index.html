@@ -223,7 +223,15 @@
             white-space: normal;      /* Permet le retour à la ligne si besoin */
             margin: 0 auto;           /* Centre le texte si besoin */
         }
-        
+        .atelier-image-zoom img:hover {
+            transform: scale(2.1);
+            z-index: 10;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+        }
+        .atelier-image-zoom {
+            position: relative;
+            overflow: hidden;
+        }
         /* Thème jardin */
         .garden-theme {
             padding: 40px 40px 10px 40px; /* Réduit le padding bas de 40px à 10px */
@@ -399,13 +407,7 @@
              <h2 class="section-title">Atelier</h2> 
             
             <div class="artwork">
-                <div class="artwork-image">
-                    <!--<div class="catalog-number">№ 1</div>-->
-                    <!--<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><rect width='800' height='600' fill='%23f0ede3'/><text x='400' y='300' font-family='Arial' font-size='24' text-anchor='middle' fill='%234a7c59'>Lumière dans les Hortensias</text></svg>" alt="Lumière dans les Hortensias">
-                -->
-                    <img src="IMG-20250901-WA0021.jpg" width="100%">
-                </div>        
-                <div class="artwork-details">  
+               <div class="artwork-details">  
                     <div class="artwork-info">
                     <!-- <h3 class="artwork-title" border="10px">L’atelier</h3> -->
                      <!--    <p class="artwork-technique">Huile sur toile, 100 × 80 cm, 2023</p>-->
@@ -417,7 +419,9 @@
                           </tr>
                            <tr>
                             <td style="padding:22px 28px; font-size:1.08rem; line-height:1.7; color:#333; word-break:break-word;">
-                                   <img src="IMG-20250901-WA0021.jpg" width="100%">
+                                   <div class="atelier-image-zoom" style="overflow:hidden; width:100%; max-width:600px; margin:auto;">
+    <img src="IMG-20250901-WA0021.jpg" width="100%" style="transition:transform 0.4s cubic-bezier(.4,2,.6,1); cursor:zoom-in;">
+</div>
                                    </td>
                           </tr>
                         </table>
